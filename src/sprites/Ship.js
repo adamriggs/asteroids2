@@ -9,6 +9,8 @@ export default class extends Phaser.Sprite {
     this.scale.y = 0.5
 
     this.cursors = game.input.keyboard.createCursorKeys()
+    //console.log(game.input.keyboard)
+    this.spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
   }
 
   update () {
@@ -23,11 +25,17 @@ export default class extends Phaser.Sprite {
     }
 
     if (this.cursors.left.isDown) {
-    	this.x -= 1
+    	this.angle -= 1
     }
 
     if (this.cursors.right.isDown) {
-    	this.x += 1
+    	this.angle += 1
     }
+
+    if (this.spaceKey.isDown) {
+    	console.log("fire!")
+    }
+
+
   }
 }
