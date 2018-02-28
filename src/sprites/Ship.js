@@ -4,6 +4,7 @@ export default class extends Phaser.Sprite {
   constructor ({ game, x, y, asset }) {
     super(game, x, y, asset)
     this.anchor.setTo(0.5)
+    this.game = game
 
     this.scale.x = 0.5
     this.scale.y = 0.5
@@ -18,7 +19,9 @@ export default class extends Phaser.Sprite {
 
     if (this.cursors.up.isDown) {
     	this.y -= 1
-    	//game.physics.arcade.accelerationFromRotation(sprite.rotation, 200, sprite.body.acceleration);
+    	//game.physics.arcade.accelerationFromRotation(sprite.rotation, 200, sprite.body.acceleration)
+
+    	//this.game.physics.arcade.accelerationFromRotation(this.rotation, 200, this.body.acceleration)
     } else {
     	//sprite.body.acceleration.set(0);
     }
