@@ -24,10 +24,10 @@ export default class extends Phaser.Sprite {
     // this.angle += 1
 
     if (this.cursors.up.isDown) {
- 		// this.y -= 1
+ 		this.y -= 1
  		// game.physics.arcade.accelerationFromRotation(sprite.rotation, 200, sprite.body.acceleration)
 
- 		this.game.physics.arcade.accelerationFromRotation(this.angle, 200, new Point(1, 1))
+ 		//this.game.physics.arcade.accelerationFromRotation(this.angle, 200, new Point(1, 1))
     } else {
 		// sprite.body.acceleration.set(0);
     }
