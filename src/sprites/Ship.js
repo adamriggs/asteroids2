@@ -1,7 +1,7 @@
 import Phaser from 'phaser'
 import Point from 'phaser'
 
- import { screenWrap } from '../utils'
+import { screenWrap } from '../utils'
 
 export default class extends Phaser.Sprite {
 
