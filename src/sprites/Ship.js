@@ -1,6 +1,8 @@
 import Phaser from 'phaser'
 import Point from 'phaser'
 
+ import { screenWrap } from '../utils'
+
 export default class extends Phaser.Sprite {
 
   constructor ({ game, x, y, asset }) {
@@ -55,31 +57,31 @@ export default class extends Phaser.Sprite {
 		console.log("fire!")
     }
 
-    this.screenWrap(this)
+    screenWrap(this)
 
   }
 
-  screenWrap (sprite) {
+ //  screenWrap (sprite) {
 
-		if (sprite.x < 0) {
+	// 	if (sprite.x < 0) {
 
-			sprite.x = game.width
+	// 		sprite.x = game.width
 
-		} else if (sprite.x > game.width) {
+	// 	} else if (sprite.x > game.width) {
 
-			sprite.x = 0
+	// 		sprite.x = 0
 
-		}
+	// 	}
 
-		if (sprite.y < 0) {
+	// 	if (sprite.y < 0) {
 
-			sprite.y = game.height
+	// 		sprite.y = game.height
 
-		} else if (sprite.y > game.height) {
+	// 	} else if (sprite.y > game.height) {
 
-			sprite.y = 0
-			
-		}
+	// 		sprite.y = 0
 
-	}
+	// 	}
+
+	// }
 }

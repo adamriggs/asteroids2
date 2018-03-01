@@ -1,6 +1,5 @@
 /* globals __DEV__ */
 import Phaser from 'phaser'
-import Mushroom from '../sprites/Mushroom'
 import Ship from '../sprites/Ship'
 import Crockett from '../sprites/Crockett'
 
@@ -19,8 +18,8 @@ export default class extends Phaser.State {
 
     this.crockett = new Crockett({
       game: this.game,
-      x: this.world.centerX,
-      y: this.world.centerY,
+      x: this.world.x=0,
+      y: this.world.y=0,
       asset: 'game-crockett'
     })
 
