@@ -6,7 +6,7 @@ export default class extends Phaser.Sprite {
   constructor ({ game, x, y, asset }) {
 
     super(game, x, y, asset)
-    
+
     this.anchor.setTo(0.5)
     this.game = game
 
@@ -61,23 +61,25 @@ export default class extends Phaser.Sprite {
 
   screenWrap (sprite) {
 
-    if (sprite.x < 0)
-    {
-        sprite.x = game.width;
-    }
-    else if (sprite.x > game.width)
-    {
-        sprite.x = 0;
-    }
+		if (sprite.x < 0) {
 
-    if (sprite.y < 0)
-    {
-        sprite.y = game.height;
-    }
-    else if (sprite.y > game.height)
-    {
-        sprite.y = 0;
-    }
+			sprite.x = game.width
 
-}
+		} else if (sprite.x > game.width) {
+
+			sprite.x = 0
+
+		}
+
+		if (sprite.y < 0) {
+
+			sprite.y = game.height
+
+		} else if (sprite.y > game.height) {
+
+			sprite.y = 0
+			
+		}
+
+	}
 }
