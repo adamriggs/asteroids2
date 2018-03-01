@@ -18,32 +18,39 @@ export default class extends Phaser.Sprite {
 
     // this doesn't work yet
     this.game.physics.enable(this, Phaser.Physics.ARCADE);
+
+    this.body.drag.set(100);
+    this.body.maxVelocity.set(200);
+    //this.body.acceleration.set(100);
   }
 
   update () {
     // this.angle += 1
+    this.body.angularAcceleration = 0
 
     if (this.cursors.up.isDown) {
- 		this.y -= 1
+ 		//this.y -= 1
+ 		//this.body.angularAcceleration -= 200
  		// game.physics.arcade.accelerationFromRotation(sprite.rotation, 200, sprite.body.acceleration)
 
- 		//this.game.physics.arcade.accelerationFromRotation(this.angle, 200, new Point(1, 1))
+ 		this.game.physics.arcade.accelerationFromRotation(this.rotation, 200, this.body.acceleration)
     } else {
-		// sprite.body.acceleration.set(0);
+		this.body.acceleration.set(0);
     }
 
     if (this.cursors.down.isDown) {
-		this.y += 1
+		//this.y += 1
+		//this.body.angularAcceleration += 200
     }
 
     if (this.cursors.left.isDown) {
-		this.angle -= 1
-		// sprite.body.angularVelocity = -300;
-    }
-
-    if (this.cursors.right.isDown) {
-		this.angle += 1
-		// sprite.body.angularVelocity = 300;
+		//this.angle -= 1
+		this.body.angularVelocity = -300;
+    }else if (this.cursors.right.isDown) {
+		//this.angle += 1
+		this.body.angularVelocity = 300;
+    } else {
+        this.body.angularVelocity = 0;
     }
 
     if (this.spaceKey.isDown) {
