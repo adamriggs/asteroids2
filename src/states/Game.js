@@ -1,7 +1,7 @@
 /* globals __DEV__ */
 import Phaser from 'phaser'
 import Ship from '../sprites/Ship'
-import Crockett from '../sprites/Crockett'
+import Asteroid from '../sprites/Asteroid'
 
 export default class extends Phaser.State {
   init() { }
@@ -16,7 +16,7 @@ export default class extends Phaser.State {
       asset: 'game-ship'
     })
 
-    this.crockett = new Crockett({
+    this.crockett = new Asteroid({
       game: this.game,
       x: this.world.x=0,
       y: this.world.y=0,
