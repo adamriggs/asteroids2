@@ -7,7 +7,7 @@ export default class  {
     this.game = game
     this.world = world
     this.asteroids = []
-    this.asteroidsStart = 10
+    this.asteroidsStart = 8
     this.init()
 
   }
@@ -25,8 +25,8 @@ export default class  {
     // push a new asteroid into the asteroids array
     var ast = new Asteroid({
                     game: this.game,
-                    x: this.world.x=50,
-                    y: this.world.y=50,
+                    // x: this.world.x=50,
+                    // y: this.world.y=50,
                     asset: 'game-spritesheet-asteroids'
                   })
 
