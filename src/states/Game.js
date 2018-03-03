@@ -16,7 +16,7 @@ export default class extends Phaser.State {
       asset: 'game-ship'
     })
 
-    this.crockett = new Asteroid({
+    this.asteroid = new Asteroid({
       game: this.game,
       x: this.world.x=0,
       y: this.world.y=0,
@@ -24,7 +24,7 @@ export default class extends Phaser.State {
     })
 
     this.game.add.existing(this.ship)
-    this.game.add.existing(this.crockett)
+    this.game.add.existing(this.asteroid)
   }
 
   render() {
