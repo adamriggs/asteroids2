@@ -14,8 +14,17 @@ export default class extends Phaser.Sprite {
 
   init () {
 
-    this.scale.x = 0.1
-    this.scale.y = 0.1
+    this.scale.x = 0.5
+    this.scale.y = 0.5
+
+    this.x = Math.random() * 50
+
+    if(Math.random() > 0.5) {
+      console.log(this.game.canvas.width)
+      this.x = (this.game.canvas.width * .8)
+    }
+
+    this.y = Math.random() * 200
 
   }
 

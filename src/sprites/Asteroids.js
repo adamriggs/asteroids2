@@ -7,13 +7,16 @@ export default class  {
     this.game = game
     this.world = world
     this.asteroids = []
+    this.asteroidsStart = 10
     this.init()
 
   }
 
   init () {
 
-    this.asteroids.push(this.createAsteroid())
+    for (var i = 0; i < this.asteroidsStart; i++) {
+      this.asteroids.push(this.createAsteroid())
+    }
     console.log(this.asteroids)
 
   }
