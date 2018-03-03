@@ -20,8 +20,8 @@ export default class extends Phaser.Sprite {
   }
 
   update () {
-    this.x +=0.1
-    this.y +=0.5
+    this.x +=0.1*(Math.random() * 1.15)
+    this.y +=0.5*(Math.random() * 1.15)
     screenWrap(this)
   }
 }

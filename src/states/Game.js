@@ -1,6 +1,7 @@
 /* globals __DEV__ */
 import Phaser from 'phaser'
 import Ship from '../sprites/Ship'
+import Asteroids from '../sprites/Asteroids'
 import Asteroid from '../sprites/Asteroid'
 
 export default class extends Phaser.State {
@@ -25,6 +26,8 @@ export default class extends Phaser.State {
 
     this.game.add.existing(this.ship)
     this.game.add.existing(this.asteroid)
+
+    this.asteroids = new Asteroids(this.game)
   }
 
   render() {
