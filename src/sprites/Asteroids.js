@@ -3,8 +3,9 @@ import Asteroid from './Asteroid'
 
 export default class  {
 
-  constructor ( game ) {
+  constructor ( game, world ) {
     this.game = game
+    this.world = world
     this.asteroids = []
     this.init()
 
@@ -14,16 +15,14 @@ export default class  {
 
     this.asteroids.push(this.createAsteroid())
 
-    console.log(this.asteroids)
-
   }
 
   createAsteroid () {
     // push a new asteroid into the asteroids array
     var ast = new Asteroid({
                     game: this.game,
-                    // x: this.world.x=0,
-                    // y: this.world.y=0,
+                    x: this.world.x=50,
+                    y: this.world.y=50,
                     asset: 'game-crockett'
                   })
 

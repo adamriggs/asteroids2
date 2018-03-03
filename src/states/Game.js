@@ -27,7 +27,7 @@ export default class extends Phaser.State {
     this.game.add.existing(this.ship)
     this.game.add.existing(this.asteroid)
 
-    this.asteroids = new Asteroids(this.game)
+    this.asteroids = new Asteroids(this.game, this.world)
   }
 
   render() {
