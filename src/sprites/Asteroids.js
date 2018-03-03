@@ -17,7 +17,6 @@ export default class  {
     for (var i = 0; i < this.asteroidsStart; i++) {
       this.asteroids.push(this.createAsteroid())
     }
-    console.log(this.asteroids)
 
   }
 
