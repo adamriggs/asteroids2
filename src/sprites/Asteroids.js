@@ -14,6 +14,7 @@ export default class  {
   init () {
 
     this.asteroids.push(this.createAsteroid())
+    console.log(this.asteroids)
 
   }
 
@@ -23,10 +24,11 @@ export default class  {
                     game: this.game,
                     x: this.world.x=50,
                     y: this.world.y=50,
-                    asset: 'game-crockett'
+                    asset: 'game-spritesheet-asteroids'
                   })
 
     ast.alive = true
+    ast.key="game-tubbs"
     this.game.add.existing(ast)
     return ast
   }
