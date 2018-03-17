@@ -61,4 +61,20 @@ export default class extends Phaser.Sprite {
     screenWrap(this)
 
   }
+
+  fireBullet () {
+
+    if (game.time.now > bulletTime) {
+        bullet = bullets.getFirstExists(false);
+
+        if (bullet) {
+            bullet.reset(ship.body.x + 28, ship.body.y + 32);
+            bullet.lifespan = 2000;
+            bullet.rotation = ship.rotation;
+            game.physics.arcade.velocityFromRotation(ship.rotation, 400, bullet.body.velocity);
+            bulletTime = game.time.now + 50;
+        }
+    }
+
+}
 }
